@@ -50,7 +50,7 @@ public class Vehiculo {
 		this.tipoServicio.add(tipoServicio);
 	}
 
-	// este metdoo en si hace una copia asi no perdiendo la condicion del viaje que
+	// este metodo en si hace una copia asi no perdiendo la condicion del viaje que mayuscula
 	// como minimo tiene que tener un tipo de servicio
 	public Set<TipoServicio> getTipoServicios() {
 		return EnumSet.copyOf(tipoServicio);
