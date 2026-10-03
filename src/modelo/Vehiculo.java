@@ -18,18 +18,15 @@ public class Vehiculo {
 	private Ubicacion ubicacion;
 
 	public Vehiculo(String patente, String modelo, int capacidadPasajeros, CategoriaVehiculo categoria,
-			TipoVehiculo tipo, TipoServicio servicio1, TipoServicio servicio2, Ubicacion ubicacion) {
+			TipoVehiculo tipo, TipoServicio servicio1, Ubicacion ubicacion) {
 
 		Set<TipoServicio> setServicios = EnumSet.noneOf(TipoServicio.class);
 
 		if (servicio1 != null) {
 			setServicios.add(servicio1);
 		}
-		if (servicio2 != null) {
-			setServicios.add(servicio2);
-		}
-
-		if (setServicios.size() < 1) {
+		
+		if (setServicios.isEmpty()) {
 			throw new IllegalArgumentException("el viaje debe contar con al menos un tipo de servicio");
 		}
 		this.patente = patente;

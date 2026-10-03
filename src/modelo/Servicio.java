@@ -15,8 +15,8 @@ public class Servicio {
 	private TipoVehiculo tipoVehiculo;
 	private CategoriaVehiculo categoriaVehiculo;
 
-	public Servicio(String nombre, double tarifaBase, double precioKm, double precioMinuto, TipoServicio tipoServicio,
-			TipoVehiculo tipoVehiculo, CategoriaVehiculo categoriaVehiculo) {
+	public Servicio(String nombre, double tarifaBase, double precioKm, double precioMinuto, 
+			TipoVehiculo tipoVehiculo, CategoriaVehiculo categoriaVehiculo,TipoServicio tipoServicio) {
 		super();
 		this.nombre = nombre;
 		this.tarifaBase = tarifaBase;

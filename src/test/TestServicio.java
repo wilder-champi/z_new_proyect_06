@@ -13,7 +13,7 @@ class TestServicio {
 	@Test
 	void calcularcosto() {
 		Servicio s = new Servicio("Estandar", 2000, 200, 100,
-				TipoServicio.PASAJEROS, TipoVehiculo.AUTO, CategoriaVehiculo.ESTANDAR);
+				 TipoVehiculo.AUTO, CategoriaVehiculo.ESTANDAR,TipoServicio.PASAJEROS);
 		
 		//cmo se calculo el costo 
 		/*terifa base:2000
