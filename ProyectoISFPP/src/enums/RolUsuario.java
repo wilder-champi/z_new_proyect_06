@@ -1,5 +1,5 @@
 package enums;
 
 public enum RolUsuario {
-CLIENTE,CONDUCTOR
+	CLIENTE,CONDUCTOR
 }

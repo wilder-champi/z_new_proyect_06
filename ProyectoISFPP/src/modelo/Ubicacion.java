@@ -32,7 +32,7 @@ public class Ubicacion {
 	
 	public double calcularDistancia(Ubicacion otra) {
 		if (otra == null) {
-			throw new IllegalArgumentException("la ubicacion no puede ser null");
+			throw new IllegalArgumentException("La ubicacion no puede ser null");
 		}
 		double lat1 = Math.toRadians(this.latitud);
 		double lat2 = Math.toRadians(otra.latitud);
@@ -57,5 +57,4 @@ public class Ubicacion {
 		return 2 * RADIO_TIERRA_KM * angulo;	
 	}
 	
-
 }

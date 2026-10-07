@@ -13,8 +13,6 @@ public class CargaServicios {
 
 	private static final int CAMPOS = 7;
 
-	
-	
 	public static List<Servicio> cargar(String archivo) {
 		List<Servicio> servicios = new ArrayList<>();
 		for (Linea linea : LectorArchivo.leer(archivo)) {
@@ -23,9 +21,6 @@ public class CargaServicios {
 		return servicios;
 	}
 	
-	
-	
-
 	private static Servicio crear(String archivo, Linea linea) {
 		List<String> c = linea.getCampos();
 		if (c.size() != CAMPOS) {
@@ -40,7 +35,5 @@ public class CargaServicios {
 			throw new ArchivoInvalidoException(archivo, linea.getNumero(), "valor invalido" + e.getMessage()	);
 		}
 	}
-	
-	
 	
 }

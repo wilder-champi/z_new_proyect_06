@@ -2,7 +2,7 @@ package datos;
 
 /**
  * Se lanza cuando una linea de un archivo de datos no se puede convertir en un objeto del modelo
- * Indicando el archivo y el numero de linea para poder corregirlo ma talde
+ * Indicando el archivo y el numero de linea para poder corregirlo mas tarde
  */
 public class ArchivoInvalidoException extends RuntimeException {
 

@@ -17,9 +17,9 @@ public class Usuario {
 		this.telefono = telefono;
 		this.email = email;
 		
-		this.cliente = new Cliente(); //el usuario ya es cliente por defecto
+		this.cliente = new Cliente(); //El usuario ya es cliente por defecto
 	    this.rolActivo = RolUsuario.CLIENTE;
-	    this.conductor = null;//todavia no es conductor asta que se registre 
+	    this.conductor = null;	//Todavia no es conductor hasta que se registre 
 	}
 
 	public String getNombre() {
@@ -50,28 +50,28 @@ public class Usuario {
 		return conductor;
 	}
 	
-	//metodo
+	//Metodo
 	public void altaConductor(String licencia,Vehiculo vehiculo) {
 		
 		if (licencia == null || vehiculo == null) {
-			throw new IllegalArgumentException("se debe registrar la licencia y vehiculo");
+			throw new IllegalArgumentException("Se debe registrar la licencia y vehiculo");
 		}
 		
 		if(conductor != null) {
-			throw new IllegalArgumentException("el usuario ya esta registrado como conductor");
+			throw new IllegalArgumentException("El usuario ya esta registrado como conductor");
 
 		}
-			// Crea el conductor con su licencia y primer vehículo,
+			//Crea el conductor con su licencia y primer vehículo,
 			conductor = new Conductor(licencia, vehiculo);
 	}
 	
-	//metodo
+	//Metodo
 	public void cambiarRolActivo(RolUsuario rolNuevo) {
 		if (rolNuevo == null)
-			throw new IllegalArgumentException("debe ingresar un rol");
+			throw new IllegalArgumentException("Debe ingresar un rol");
 		
 		if(rolNuevo == RolUsuario.CONDUCTOR && conductor == null ) {
-			throw new IllegalArgumentException("el usuario todavia no esta registrado como conductor");
+			throw new IllegalArgumentException("El usuario todavia no esta registrado como conductor");
 		}
 		rolActivo = rolNuevo;
 	}

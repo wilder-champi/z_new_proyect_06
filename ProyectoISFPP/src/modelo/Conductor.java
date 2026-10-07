@@ -9,8 +9,8 @@ import enums.EstadoConductor;
 public class Conductor {
 	
 	private String licenciaConducir;
-	private List<Vehiculo> vehiculos;//declaramos
-	private List<Viaje> viajes;//declaramos
+	private List<Vehiculo> vehiculos;	//Declaramos
+	private List<Viaje> viajes;	//Declaramos
 	
 	private Vehiculo vehiculoActivo;
 	private EstadoConductor	estadoconductor;
@@ -18,9 +18,9 @@ public class Conductor {
 	
 	public Conductor(String licenciaConducir,Vehiculo vehiculo) {
 		this.licenciaConducir = licenciaConducir;
-		vehiculos = new ArrayList<Vehiculo>();// creamos
+		vehiculos = new ArrayList<Vehiculo>();	//Creamos
 		agregarVehiculo(vehiculo);
-		viajes = new ArrayList<Viaje>();//creamos
+		viajes = new ArrayList<Viaje>();	//Creamos
 		this.vehiculoActivo = vehiculo;
 		this.estadoconductor = EstadoConductor.FUERA_DE_SERVICIO;
 	}

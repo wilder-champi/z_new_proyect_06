@@ -27,7 +27,7 @@ public class Vehiculo {
 		}
 
 		if (setServicios.isEmpty()) {
-			throw new IllegalArgumentException("el viaje debe contar con al menos un tipo de servicio");
+			throw new IllegalArgumentException("El viaje debe contar con al menos un tipo de servicio");
 		}
 		this.patente = patente;
 		this.modelo = modelo;
@@ -35,21 +35,21 @@ public class Vehiculo {
 		this.categoriaVehiculo = categoria;
 		this.tipoVehiculo = tipo;
 		this.tipoServicio = setServicios;
-		setUbicacion(ubicacion); // valida y guarda la ubicacion resivida
+		setUbicacion(ubicacion); //Valida y guarda la ubicacion resivida
 	}
 
 	public void agregarTipoServicio(TipoServicio tipoServicio) {
 
 		if (tipoServicio == null) {
-			throw new IllegalArgumentException("el tipo de servicio no puede ser null");
+			throw new IllegalArgumentException("El tipo de servicio no puede ser null");
 		}
 
 		this.tipoServicio.add(tipoServicio);
 	}
 
-	// este metodo en si hace una copia asi no perdiendo la condicion del viaje que
-	// mayuscula
-	// como minimo tiene que tener un tipo de servicio
+	//Este metodo en si hace una copia asi no perdierdo la condicion del viaje que
+	//mayuscula
+	//como minimo tiene que tener un tipo de servicio
 	public Set<TipoServicio> getTipoServicios() {
 		return EnumSet.copyOf(tipoServicio);
 	}

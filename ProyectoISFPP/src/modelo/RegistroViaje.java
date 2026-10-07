@@ -33,8 +33,5 @@ public class RegistroViaje {
 	public String toString() {
 		return "RegistroViaje [FechaHora=" + FechaHora + ", estadoViaje=" + estadoViaje + "]";
 	}
-	
-	
-	
 
 }

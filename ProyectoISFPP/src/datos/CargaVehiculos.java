@@ -13,16 +13,16 @@ import modelo.Vehiculo;
 
 public class CargaVehiculos {
 
-	private static final int CAMPOS_MINIMOS = 6; // el segundo tipo de servicio es opcional
+	private static final int CAMPOS_MINIMOS = 6; // El segundo tipo de servicio es opcional
 
-	// devuelve los vehiculos por patente, asi CargaUsuarios los puede buscar
+	// Devuelve los vehiculos por patente, asi CargaUsuarios los puede buscar
 	
 	
 	public static Map<String, Vehiculo> cargar(String archivo, GeneradorUbicacion generador) {
 		Map<String, Vehiculo> vehiculos = new LinkedHashMap<>();
 		for (Linea linea : LectorArchivo.leer(archivo)) {
 			Vehiculo vehiculo = crear(archivo, linea, generador);
-			if (vehiculos.containsKey(vehiculo.getPatente())) {//verifica que dicha patente no este carga previamente en el mapa
+			if (vehiculos.containsKey(vehiculo.getPatente())) {//verifica que dicha patente no este cargada previamente en el mapa
 				throw new ArchivoInvalidoException(archivo, linea.getNumero(),
 						"patente repetida " + vehiculo.getPatente());
 			}
@@ -31,8 +31,6 @@ public class CargaVehiculos {
 		return vehiculos;
 	}
 
-	
-	
 	
 	private static Vehiculo crear(String archivo, Linea linea, GeneradorUbicacion generador) {
 		List<String> c = linea.getCampos();
@@ -45,7 +43,7 @@ public class CargaVehiculos {
 			Vehiculo vehiculo = new Vehiculo(c.get(0), c.get(1), Integer.parseInt(c.get(2)),
 					TipoVehiculo.valueOf(c.get(3)), CategoriaVehiculo.valueOf(c.get(4)), TipoServicio.valueOf(c.get(5)),
 					generador.generar());
-			// si trae un segundo tipo de servicio se agrega
+			// Si trae un segundo tipo de servicio se agrega
 			for (int i = CAMPOS_MINIMOS; i < c.size(); i++) {
 				vehiculo.agregarTipoServicio(TipoServicio.valueOf(c.get(i)));
 			}
