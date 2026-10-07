@@ -67,6 +67,11 @@ public class Servicio {
 		return categoriaVehiculo;
 	}
 
+	//Agrugue esto para el Test2
+	public void setCategoriaVehiculo(CategoriaVehiculo categoriaVehiculo) {
+		this.categoriaVehiculo = categoriaVehiculo;
+	}
+
 	public double calcularCosto(double km, double minutos) {
 
 		return this.tarifaBase + (this.precioKm * km) + (this.precioMinuto * minutos);
