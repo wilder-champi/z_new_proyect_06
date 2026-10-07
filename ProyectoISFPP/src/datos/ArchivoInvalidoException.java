@@ -12,7 +12,7 @@ public class ArchivoInvalidoException extends RuntimeException {
 	private final int numeroLinea;
 
 	public ArchivoInvalidoException(String archivo, int numeroLinea, String motivo) {
-		super("error en " + archivo + ", linea " + numeroLinea + ": " + motivo);
+		super("Error en " + archivo + ", linea " + numeroLinea + ": " + motivo);
 		this.archivo = archivo;
 		this.numeroLinea = numeroLinea;
 	}
